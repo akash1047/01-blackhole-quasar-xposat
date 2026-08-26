@@ -28,6 +28,8 @@ Concept primer (black holes → accretion → quasars / AGN): **[docs/wiki/](doc
 typst compile --root . docs/book/book.typ docs/book/black-holes-quasars-primer.pdf
 ```
 
+A prebuilt copy is published automatically on every push to `main` that touches the wiki or book source: **[latest PDF](https://github.com/akash1047/01-blackhole-quasar-xposat/releases/latest/download/black-holes-quasars-primer.pdf)**.
+
 ## XPoSat (context)
 
 - **Mission**: ISRO X-ray Polarimeter Satellite

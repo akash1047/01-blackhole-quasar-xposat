@@ -28,6 +28,9 @@ Keep this tree in sync with the repo. **When you create, move, rename, or delete
 ├── CLAUDE.md                 # symlink → AGENTS.md
 ├── README.md                 # human overview; points at the wiki
 ├── .gitignore                # FITS, .obsidian, and other local/large files
+├── .github/
+│   └── workflows/
+│       └── release-pdf.yml   # builds docs/book/book.typ and publishes it as a rolling GitHub Release
 ├── analysis/                 # scripts, notebooks, reduction pipelines
 ├── data/
 │   └── README.md             # how data was obtained, versions, citations
