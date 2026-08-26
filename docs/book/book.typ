@@ -1,5 +1,5 @@
 // Book-form export of docs/wiki/*.md
-// Compile: typst compile docs/book/book.typ docs/book/black-holes-quasars-primer.pdf
+// Compile: typst compile --root . docs/book/book.typ docs/book/black-holes-quasars-primer.pdf
 
 #set page(paper: "a4", numbering: "1", margin: (x: 2.5cm, y: 3cm))
 #set text(font: "New Computer Modern", size: 11pt, lang: "en")

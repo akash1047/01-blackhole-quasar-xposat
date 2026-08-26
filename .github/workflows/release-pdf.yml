@@ -1,0 +1,43 @@
+name: Release book PDF
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - docs/wiki/**
+      - docs/book/**
+      - figures/wiki/**
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Pinned to the version this repo's book.typ was authored/validated against.
+      # No version is pinned anywhere else in the repo (see README); bump here
+      # if the source starts relying on newer Typst features.
+      - uses: typst-community/setup-typst@v3
+        with:
+          typst-version: "0.15.1"
+
+      - name: Compile book PDF
+        run: typst compile --root . docs/book/book.typ docs/book/black-holes-quasars-primer.pdf
+
+      - name: Publish rolling release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: latest
+          commit: ${{ github.sha }}
+          name: Latest book PDF
+          body: |
+            Auto-built from `docs/book/book.typ` at ${{ github.sha }}.
+            This release is updated on every push to `main` that touches the wiki or book source.
+          artifacts: docs/book/black-holes-quasars-primer.pdf
+          allowUpdates: true
+          removeArtifacts: true
+          makeLatest: true
