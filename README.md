@@ -20,6 +20,14 @@ docs/         longer write-ups
 
 Concept primer (black holes → accretion → quasars / AGN): **[docs/wiki/](docs/wiki/README.md)**.
 
+## Book PDF
+
+`docs/book/book.typ` ports the wiki into a single book-form PDF (title page, TOC, numbered chapters). The compiled PDF is gitignored; rebuild it after editing the wiki with:
+
+```
+typst compile --root . docs/book/book.typ docs/book/black-holes-quasars-primer.pdf
+```
+
 ## XPoSat (context)
 
 - **Mission**: ISRO X-ray Polarimeter Satellite

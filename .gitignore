@@ -17,6 +17,9 @@ __pycache__/
 .ipynb_checkpoints/
 .pytest_cache/
 
+# Generated build output
+docs/book/*.pdf
+
 # OS / editor
 .DS_Store
 *.swp

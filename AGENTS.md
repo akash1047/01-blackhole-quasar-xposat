@@ -33,11 +33,13 @@ Keep this tree in sync with the repo. **When you create, move, rename, or delete
 │   └── README.md             # how data was obtained, versions, citations
 ├── docs/
 │   ├── ONBOARDING.md         # contributor/agent onboarding
-│   └── wiki/
-│       ├── README.md         # primer index (black holes → quasars)
-│       ├── black-holes.md    # horizons, accretion, mass scales
-│       ├── quasars.md        # AGN anatomy, unification, X-ray hook
-│       └── glossary.md       # one-line terms
+│   ├── wiki/
+│   │   ├── README.md         # primer index (black holes → quasars)
+│   │   ├── black-holes.md    # horizons, accretion, mass scales
+│   │   ├── quasars.md        # AGN anatomy, unification, X-ray hook
+│   │   └── glossary.md       # one-line terms
+│   └── book/
+│       └── book.typ          # Typst book build of the wiki; compiled PDF is gitignored
 ├── figures/
 │   └── wiki/                 # teaching art + labeled SVG diagrams
 │       ├── black-hole-accretion.jpg
