@@ -12,7 +12,7 @@ NASA’s compact statement of the same idea: they are distant galaxies whose cor
 
 Gas falls toward the SMBH → forms a disk → friction and magnetic stresses heat it → UV/optical continuum from the disk, X-rays from a hot **corona**, sometimes **jets** along the axis. The hole is the gravitational well. The *lamp* is the infalling gas.
 
-Radiative efficiency is of order \(0.1\,\dot{M}c^2\). A luminous quasar can swallow on the order of **a solar mass per year** (extreme objects more). That is enough to outshine \(10^{12}\)–\(10^{14}\) Suns from a volume smaller than the solar system for the inner disk.
+Radiative efficiency is of order $0.1\,\dot{M}c^2$. A luminous quasar can swallow on the order of **a solar mass per year** (extreme objects more). That is enough to outshine $10^{12}$–$10^{14}$ Suns from a volume smaller than the solar system for the inner disk.
 
 ## Anatomy
 
@@ -20,7 +20,7 @@ Radiative efficiency is of order \(0.1\,\dot{M}c^2\). A luminous quasar can swal
 
 | Piece | What it is | Typical light |
 |-------|------------|----------------|
-| SMBH | \(10^7\)–\(10^{10}\,M_\odot\) | none from inside the horizon |
+| SMBH | $10^7$–$10^{10}\,M_\odot$ | none from inside the horizon |
 | Accretion disk | Orbiting gas; inner edge near ISCO | thermal UV / optical |
 | Corona | Hot plasma above the inner disk | X-rays |
 | BLR | Fast clouds at light-days | **broad** emission lines |
@@ -49,7 +49,7 @@ Radiative efficiency is of order \(0.1\,\dot{M}c^2\). A luminous quasar can swal
 
 ## Why they look like stars, and why they are not
 
-Early radio catalogs found objects that looked **stellar** on optical plates (hence *quasi-stellar*). Spectra showed huge **redshift**: they are cosmological. The first widely recognized example was **3C 273** (Schmidt, 1963). Nearest luminous quasars are still hundreds of millions of light-years away; many sit at redshift \(z \sim 1\)–\(3\), when galaxies were gas-rich. That is why the local universe has few classic quasars — the fuel ran down — while leftover SMBHs remain in galaxy centers (the “dead quasar” / Soltan argument).
+Early radio catalogs found objects that looked **stellar** on optical plates (hence *quasi-stellar*). Spectra showed huge **redshift**: they are cosmological. The first widely recognized example was **3C 273** (Schmidt, 1963). Nearest luminous quasars are still hundreds of millions of light-years away; many sit at redshift $z \sim 1$–$3$, when galaxies were gas-rich. That is why the local universe has few classic quasars — the fuel ran down — while leftover SMBHs remain in galaxy centers (the “dead quasar” / Soltan argument).
 
 ## Feedback
 

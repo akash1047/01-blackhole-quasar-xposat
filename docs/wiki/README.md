@@ -30,7 +30,7 @@ XPoSat / POLIX / XSPECT: X-ray polarimetry and spectroscopy of the inner flow �
 
 - NASA, [Hubble quasars](https://science.nasa.gov/mission/hubble/science/science-behind-the-discoveries/hubble-quasars/)
 - NASA, [What are active galactic nuclei?](https://science.nasa.gov/mission/webb/science-overview/science-explainers/what-are-active-galactic-nuclei/)
-- Narayan, Johnson, & Gammie, *Nature* **615**, 597 (2023) — accretion and the inner engine
-- Tremaine, [Quasars and black holes](https://www.ias.edu/ideas/2015/tremaine-blackholes-quasars) (IAS)
+- Narayan & Quataert, *Nature* **615**, 597 (2023) — accretion and the inner engine
+- Tremaine, [The Odd Couple: Quasars and Black Holes](https://www.ias.edu/ideas/2015/tremaine-quasars) (IAS)
 
 Illustrations: Grok Imagine (`figures/wiki/*.jpg`). Diagrams: SVG (`figures/wiki/*.svg`). Neither is telescope data.
