@@ -1,0 +1,25 @@
+# Large / binary research products
+data/**
+!data/README.md
+*.fits
+*.fits.gz
+*.evt
+*.pha
+*.rmf
+*.arf
+*.lc
+
+# Python / notebooks
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+.obsidian/

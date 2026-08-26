@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 400" role="img" aria-labelledby="t d">
+  <title id="t">AGN unification by viewing angle</title>
+  <desc id="d">The same engine looks like a blazar, a type-1 quasar, or a type-2 / radio galaxy depending on line of sight.</desc>
+  <rect width="980" height="400" fill="#0b1220"/>
+  <text x="490" y="32" text-anchor="middle" fill="#e8eef8" font-family="Georgia, serif" font-size="20">Same engine, three views</text>
+  <text x="490" y="54" text-anchor="middle" fill="#9aa7bd" font-family="system-ui, sans-serif" font-size="12">A simplified unification picture. Radio-loud vs radio-quiet is a separate axis (jet power).</text>
+
+  <!-- central engine mini -->
+  <g transform="translate(490,210)">
+    <polygon points="0,-150 8,0 -8,0" fill="#5ec8ff" opacity="0.7"/>
+    <polygon points="0,150 8,0 -8,0" fill="#5ec8ff" opacity="0.5"/>
+    <ellipse cx="-70" cy="0" rx="48" ry="22" fill="#6b3d24" stroke="#c48a5a"/>
+    <ellipse cx="70" cy="0" rx="48" ry="22" fill="#6b3d24" stroke="#c48a5a"/>
+    <ellipse cx="0" cy="0" rx="40" ry="8" fill="#f0a03a"/>
+    <circle r="7" fill="#000" stroke="#ff6b4a" stroke-width="2"/>
+  </g>
+
+  <!-- sightlines -->
+  <g stroke-linecap="round" fill="none">
+    <path d="M490,70 L490,40" stroke="#9ee2ff" stroke-width="2"/>
+    <path d="M560,175 L720,90" stroke="#f0c14a" stroke-width="2"/>
+    <path d="M610,210 L780,210" stroke="#c48a5a" stroke-width="2"/>
+  </g>
+  <polygon points="486,48 490,38 494,48" fill="#9ee2ff"/>
+  <polygon points="710,84 722,86 712,96" fill="#f0c14a"/>
+  <polygon points="770,206 782,210 770,214" fill="#c48a5a"/>
+
+  <g font-family="system-ui, sans-serif">
+    <rect x="28" y="86" width="250" height="86" rx="8" fill="#121a2b" stroke="#3a6a88"/>
+    <text x="44" y="112" fill="#9ee2ff" font-size="14" font-weight="600">Down the jet → blazar</text>
+    <text x="44" y="132" fill="#c9d4e5" font-size="12">Jet pointed at Earth. Extreme</text>
+    <text x="44" y="148" fill="#c9d4e5" font-size="12">variability; disk often hidden</text>
+    <text x="44" y="164" fill="#c9d4e5" font-size="12">by beaming.</text>
+
+    <rect x="28" y="196" width="250" height="86" rx="8" fill="#121a2b" stroke="#6a5a28"/>
+    <text x="44" y="222" fill="#f0c14a" font-size="14" font-weight="600">Into the cone → type 1 / quasar</text>
+    <text x="44" y="242" fill="#c9d4e5" font-size="12">Direct view of disk + BLR.</text>
+    <text x="44" y="258" fill="#c9d4e5" font-size="12">Broad emission lines. This is</text>
+    <text x="44" y="274" fill="#c9d4e5" font-size="12">the classic unobscured quasar.</text>
+
+    <rect x="28" y="306" width="250" height="72" rx="8" fill="#121a2b" stroke="#6a4a2a"/>
+    <text x="44" y="332" fill="#e0b48a" font-size="14" font-weight="600">Through the torus → type 2</text>
+    <text x="44" y="352" fill="#c9d4e5" font-size="12">Engine hidden. Narrow lines;</text>
+    <text x="44" y="368" fill="#c9d4e5" font-size="12">IR / X-rays still leak out.</text>
+  </g>
+</svg>

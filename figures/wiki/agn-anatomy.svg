@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 520" role="img" aria-labelledby="t d">
+  <title id="t">Anatomy of an active galactic nucleus</title>
+  <desc id="d">Side view of SMBH, accretion disk, corona, broad-line region, dusty torus, narrow-line region, and jets.</desc>
+  <rect width="980" height="520" fill="#0b1220"/>
+  <text x="490" y="34" text-anchor="middle" fill="#e8eef8" font-family="Georgia, serif" font-size="20">Active galactic nucleus — what a quasar is made of</text>
+  <text x="490" y="56" text-anchor="middle" fill="#9aa7bd" font-family="system-ui, sans-serif" font-size="12">Not to scale. Inner engine is light-days across; jets can reach hundreds of thousands of light-years.</text>
+
+  <!-- jets -->
+  <polygon points="490,70 502,250 478,250" fill="#5ec8ff" opacity="0.55"/>
+  <polygon points="490,450 502,270 478,270" fill="#5ec8ff" opacity="0.45"/>
+  <line x1="490" y1="62" x2="490" y2="458" stroke="#9ee2ff" stroke-width="2"/>
+
+  <!-- torus (two ellipses left/right) -->
+  <ellipse cx="330" cy="260" rx="118" ry="52" fill="#6b3d24" stroke="#c48a5a" stroke-width="2"/>
+  <ellipse cx="650" cy="260" rx="118" ry="52" fill="#6b3d24" stroke="#c48a5a" stroke-width="2"/>
+  <ellipse cx="330" cy="260" rx="70" ry="28" fill="#0b1220"/>
+  <ellipse cx="650" cy="260" rx="70" ry="28" fill="#0b1220"/>
+
+  <!-- BLR clouds -->
+  <g fill="#d9a3ff" opacity="0.85">
+    <ellipse cx="430" cy="232" rx="16" ry="8"/>
+    <ellipse cx="550" cy="228" rx="14" ry="7"/>
+    <ellipse cx="438" cy="288" rx="13" ry="7"/>
+    <ellipse cx="548" cy="292" rx="15" ry="8"/>
+    <ellipse cx="470" cy="218" rx="10" ry="6"/>
+    <ellipse cx="510" cy="302" rx="11" ry="6"/>
+  </g>
+
+  <!-- disk -->
+  <ellipse cx="490" cy="260" rx="92" ry="16" fill="#f0a03a" stroke="#ffe08a" stroke-width="1.5"/>
+  <ellipse cx="490" cy="260" rx="38" ry="7" fill="#fff4c8"/>
+
+  <!-- corona -->
+  <ellipse cx="490" cy="248" rx="28" ry="10" fill="#fff" opacity="0.25"/>
+  <ellipse cx="490" cy="272" rx="28" ry="10" fill="#fff" opacity="0.18"/>
+
+  <!-- BH -->
+  <circle cx="490" cy="260" r="10" fill="#000" stroke="#ff6b4a" stroke-width="2"/>
+
+  <!-- NLR clouds farther out -->
+  <g fill="#7dffb3" opacity="0.7">
+    <ellipse cx="400" cy="160" rx="18" ry="9"/>
+    <ellipse cx="580" cy="155" rx="16" ry="8"/>
+    <ellipse cx="405" cy="360" rx="17" ry="8"/>
+    <ellipse cx="585" cy="365" rx="16" ry="8"/>
+  </g>
+
+  <!-- labels -->
+  <g font-family="system-ui, sans-serif" font-size="13" fill="#e8eef8">
+    <line x1="490" y1="78" x2="620" y2="78" stroke="#9ee2ff"/>
+    <text x="628" y="82" fill="#9ee2ff">relativistic jet</text>
+
+    <line x1="400" y1="160" x2="250" y2="118" stroke="#7dffb3"/>
+    <text x="24" y="114" fill="#7dffb3">narrow-line region (NLR)</text>
+    <text x="24" y="132" fill="#8ea0b8" font-size="11">ionized gas, hundreds of pc</text>
+
+    <line x1="250" y1="248" x2="180" y2="200" stroke="#c48a5a"/>
+    <text x="24" y="196" fill="#e0b48a">dusty torus</text>
+    <text x="24" y="214" fill="#8ea0b8" font-size="11">hides the engine if edge-on</text>
+
+    <line x1="430" y1="232" x2="250" y2="300" stroke="#d9a3ff"/>
+    <text x="24" y="296" fill="#d9a3ff">broad-line region (BLR)</text>
+    <text x="24" y="314" fill="#8ea0b8" font-size="11">fast clouds, light-days out</text>
+
+    <line x1="560" y1="260" x2="780" y2="210" stroke="#f0a03a"/>
+    <text x="788" y="206" fill="#f0a03a">accretion disk</text>
+    <text x="788" y="224" fill="#8ea0b8" font-size="11">friction → UV / optical light</text>
+
+    <line x1="510" y1="248" x2="780" y2="268" stroke="#ffe9a8"/>
+    <text x="788" y="272" fill="#ffe9a8">X-ray corona</text>
+    <text x="788" y="290" fill="#8ea0b8" font-size="11">hot plasma above the disk</text>
+
+    <line x1="500" y1="268" x2="780" y2="340" stroke="#ff6b4a"/>
+    <text x="788" y="336" fill="#ff6b4a">supermassive black hole</text>
+    <text x="788" y="354" fill="#8ea0b8" font-size="11">typically 10⁷–10¹⁰ solar masses</text>
+  </g>
+</svg>
