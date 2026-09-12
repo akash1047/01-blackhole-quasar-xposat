@@ -33,7 +33,7 @@ literature + archive catalogs
 - **Agent instructions**: `AGENTS.md` (`CLAUDE.md` is a symlink)
 - **Data provenance**: `data/README.md`
 - **Working notes**: `notes/`
-- **Concept wiki**: `docs/wiki/`
+- **Concept wiki**: `docs/wiki/` (black holes → quasars → X-rays)
 
 ## Directory Map
 

@@ -53,4 +53,4 @@ If magnetic fields thread the inner disk and spinning hole, some energy and part
 
 A quiet SMBH (Sgr A\* today) is dim. Feed the same kind of object a large $\dot{M}$ and the disk + corona become a lighthouse: an [active galactic nucleus](quasars.md), of which a **quasar** is the high-luminosity end.
 
-Continue: [Quasars](quasars.md) · [Glossary](glossary.md)
+Continue: [Quasars](quasars.md) · [X-ray astronomy](x-ray-astronomy.md) · [Glossary](glossary.md)
