@@ -42,9 +42,10 @@ Keep this tree in sync with the repo. **When you create, move, rename, or delete
 ├── docs/
 │   ├── ONBOARDING.md         # contributor/agent onboarding
 │   ├── wiki/
-│   │   ├── README.md         # primer index (black holes → quasars)
+│   │   ├── README.md         # primer index (black holes → quasars → X-rays)
 │   │   ├── black-holes.md    # horizons, accretion, mass scales
 │   │   ├── quasars.md        # AGN anatomy, unification, X-ray hook
+│   │   ├── x-ray-astronomy.md # keV band, corona, reflection, polarimetry
 │   │   └── glossary.md       # one-line terms
 │   └── book/
 │       └── book.typ          # Typst book build of the wiki; compiled PDF is gitignored
@@ -57,7 +58,10 @@ Keep this tree in sync with the repo. **When you create, move, rename, or delete
 │       ├── agn-engine.jpg
 │       ├── schwarzschild-radii.svg
 │       ├── agn-anatomy.svg
-│       └── agn-unification.svg
+│       ├── agn-unification.svg
+│       ├── x-ray-corona.jpg          # teaching art: disk + corona
+│       ├── x-ray-spectrum.svg        # disk / corona / Fe Kα / Compton hump
+│       └── x-ray-polarimetry.svg     # two-fold roll-curve cartoon
 ├── literature/
 │   └── POLIX_User_Handbook.pdf  # ISSDC POLIX L2 user guide (v1.0, Oct 2025)
 └── notes/

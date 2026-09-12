@@ -57,6 +57,6 @@ Disk winds and jets dump energy and momentum into the host. They can heat or exp
 
 ## Why X-rays (and later, XPoSat)
 
-The **corona** and inner disk live at tens of gravitational radii. X-rays are produced there, and they **reflect** off the disk (iron Kα, Compton hump). Polarization encodes geometry: disk vs corona vs jet. That is the bridge from this wiki to XPoSat (POLIX polarimetry, XSPECT spectroscopy) in later notes.
+The **corona** and inner disk live at tens of gravitational radii. X-rays are produced there, and they **reflect** off the disk (iron Kα, Compton hump). Polarization encodes geometry: disk vs corona vs jet. That is the bridge to [X-ray astronomy](x-ray-astronomy.md) and then to XPoSat (POLIX polarimetry, XSPECT spectroscopy).
 
-Continue: [Black holes](black-holes.md) · [Glossary](glossary.md)
+Continue: [X-ray astronomy](x-ray-astronomy.md) · [Black holes](black-holes.md) · [Glossary](glossary.md)

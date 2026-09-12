@@ -18,7 +18,7 @@ docs/         longer write-ups
 
 ## Start here
 
-Concept primer (black holes → accretion → quasars / AGN): **[docs/wiki/](docs/wiki/README.md)**.
+Concept primer (black holes → accretion → quasars / AGN → X-rays): **[docs/wiki/](docs/wiki/README.md)**.
 
 ## Book PDF
 

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 380" role="img" aria-labelledby="t d">
+  <title id="t">Two-fold modulation from linear polarization</title>
+  <desc id="d">A scattering polarimeter records a rate that varies twice per 360 degrees of roll angle.</desc>
+  <rect width="980" height="380" fill="#0b1220"/>
+  <text x="490" y="32" text-anchor="middle" fill="#e8eef8" font-family="Georgia, serif" font-size="20">Polarimetry: a two-fold roll curve</text>
+  <text x="490" y="54" text-anchor="middle" fill="#9aa7bd" font-family="system-ui, sans-serif" font-size="12">Scattered X-rays prefer a plane. Rotating the instrument makes the count rate go up–down twice per turn.</text>
+
+  <!-- left: scatter cartoon -->
+  <circle cx="170" cy="200" r="18" fill="#cfe8ff" stroke="#9ee2ff" stroke-width="2"/>
+  <text x="170" y="205" text-anchor="middle" fill="#0b1220" font-family="system-ui, sans-serif" font-size="11">e⁻</text>
+  <line x1="50" y1="200" x2="148" y2="200" stroke="#ffe08a" stroke-width="3"/>
+  <polygon points="148,194 162,200 148,206" fill="#ffe08a"/>
+  <line x1="182" y1="188" x2="250" y2="120" stroke="#9ee2ff" stroke-width="3"/>
+  <polygon points="244,128 258,114 236,116" fill="#9ee2ff"/>
+  <text x="70" y="188" fill="#ffe08a" font-family="system-ui, sans-serif" font-size="12">incoming</text>
+  <text x="230" y="112" fill="#9ee2ff" font-family="system-ui, sans-serif" font-size="12">scattered</text>
+  <text x="170" y="300" text-anchor="middle" fill="#e8eef8" font-family="Georgia, serif" font-size="14">Thomson / Compton scatter</text>
+  <text x="170" y="320" text-anchor="middle" fill="#9aa7bd" font-family="system-ui, sans-serif" font-size="12">POLIX-style polarimeter</text>
+
+  <!-- right: modulation curve -->
+  <rect x="360" y="80" width="560" height="250" rx="8" fill="#121a2c" stroke="#2a3a55"/>
+  <line x1="410" y1="280" x2="880" y2="280" stroke="#9aa7bd" stroke-width="1.5"/>
+  <line x1="410" y1="280" x2="410" y2="110" stroke="#9aa7bd" stroke-width="1.5"/>
+  <text x="645" y="308" text-anchor="middle" fill="#9aa7bd" font-family="system-ui, sans-serif" font-size="12">roll angle φ  →   0°        90°       180°      270°      360°</text>
+  <text x="398" y="195" text-anchor="middle" fill="#9aa7bd" font-family="system-ui, sans-serif" font-size="12" transform="rotate(-90 398 195)">rate</text>
+
+  <!-- cosine 2phi -->
+  <path d="M410 195
+           C445 120, 480 120, 515 195
+           C550 270, 585 270, 620 195
+           C655 120, 690 120, 725 195
+           C760 270, 795 270, 830 195
+           C850 155, 870 155, 880 175"
+        stroke="#7dffb3" stroke-width="3" fill="none"/>
+  <line x1="410" y1="195" x2="880" y2="195" stroke="#2a3a55" stroke-dasharray="4 4"/>
+  <text x="640" y="100" text-anchor="middle" fill="#7dffb3" font-family="system-ui, sans-serif" font-size="13">R(φ) = A + B cos 2φ + C sin 2φ</text>
+  <text x="640" y="340" text-anchor="middle" fill="#6b7789" font-family="system-ui, sans-serif" font-size="11">Two peaks per 360°. Amplitude is not automatically a polarization degree — background and instrument response sit in A, B, C.</text>
+</svg>

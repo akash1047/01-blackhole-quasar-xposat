@@ -156,13 +156,88 @@ Disk winds and jets dump energy and momentum into the host. They can heat or exp
 
 == Why X-rays (and later, XPoSat)
 
-The *corona* and inner disk live at tens of gravitational radii. X-rays are produced there, and they *reflect* off the disk (iron K$alpha$, Compton hump). Polarization encodes geometry: disk vs corona vs jet. That is the bridge from this wiki to XPoSat (POLIX polarimetry, XSPECT spectroscopy) in later notes.
+The *corona* and inner disk live at tens of gravitational radii. X-rays are produced there, and they *reflect* off the disk (iron K$alpha$, Compton hump). Polarization encodes geometry: disk vs corona vs jet. That is the bridge to the X-ray chapter and then to XPoSat.
+
+#pagebreak()
+
+= X-ray astronomy
+
+Enough X-ray vocabulary to read the black-hole and quasar chapters and the XPoSat notes. Not a mission handbook.
+
+X-rays here are photons of energy *~0.1--100 keV* (wavelengths of ångströms). Hot inner accretion flows can radiate X-rays directly, while energetic electrons can upscatter lower-energy seed photons into the X-ray band. Earth's atmosphere absorbs this band, so the telescope has to be in space.
+
+#fig("../../figures/wiki/x-ray-corona.jpg")[
+  Teaching illustration: inner disk plus a compact hot corona. Not an observation.
+]
+
+== Why compact objects shine in X-rays
+
+Gravitational energy released near the ISCO becomes heat and radiation.
+
+#table(
+  columns: 3,
+  table.header([*Engine*], [*Typical thermal peak*], [*Where the X-rays come from*]),
+  [Stellar-mass black hole], [~keV (the disk itself can be X-ray hot)], [Disk + corona],
+  [Neutron star], [~keV], [Disk + surface or boundary layer; magnetic poles in some systems; corona],
+  [Supermassive (quasar / AGN)], [UV / optical disk], [A compact *corona* that upscatters disk photons; sometimes a jet],
+)
+
+For comparable Eddington-scaled accretion rates, a larger black hole has a cooler disk. That is why a Galactic binary and a quasar both belong in an X-ray mission, but their _thermal_ peaks differ. Accreting neutron stars add emission from a surface or boundary layer (#link("https://heasarc.gsfc.nasa.gov/docs/nicer/science_nuggets/20250109.html")[NASA/HEASARC]).
+
+== Three spectral pieces
+
+#fig("../../figures/wiki/x-ray-spectrum.svg", width: 90%)[
+  Disk seed photons, Compton upscattering in a corona, and reflection (Fe K$alpha$, Compton hump).
+]
+
+1. *Power-law continuum.* Disk UV/soft X-ray photons scatter off hot electrons in the corona (*inverse Compton*). The result is a roughly $N(E) prop E^(-Gamma)$ spectrum. $Gamma tilde.op 1.7$--$2.0$ is a common AGN range; treat numbers as order of magnitude.
+2. *Reflection.* Some coronal X-rays hit the disk. Iron fluorescence makes a line near *6.4 keV* (neutral Fe K$alpha$; ionized gas shifts it). Compton down-scattering in optically thick disk material makes a broad *Compton hump* around ~20--30 keV.
+3. *Soft excess / thermal disk.* Extra flux below ~1--2 keV. In stellar-mass systems this can be the disk itself; in AGN it is still debated.
+
+For these spectral landmarks, see #link("https://doi.org/10.1038/s41550-020-01280-9")[Reynolds (2021)]; for the debated AGN soft excess, see #link("https://doi.org/10.1111/j.1365-2966.2006.11117.x")[Sobolewska & Done (2007)].
+
+*XSPECT* (~0.8--15 keV) sits on the power law, the iron band, and the soft end. *POLIX* (~8--30 keV) sits on the hard continuum and the Compton-hump region --- useful for polarimetry of the scattering geometry (#link("https://www.isro.gov.in/ISRO_EN/XPoSat_X-Ray_Polarimetry_Mission.html")[ISRO]).
+
+== Polarimetry in one paragraph
+
+Linear polarization is a preferred electric-field direction. Scattering polarizes; the sky-projected field encodes _geometry_ (disk inclination, corona shape, jet order) that a spectrum alone mixes with optical depth and temperature.
+
+A rotating scattering polarimeter records a count rate that varies *twice per 360° of roll*:
+
+$ R(phi) = A + B cos(2 phi) + C sin(2 phi) . $
+
+#fig("../../figures/wiki/x-ray-polarimetry.svg", width: 90%)[
+  Two-fold modulation from linear polarization. Amplitude is not automatically a polarization degree.
+]
+
+The two-fold amplitude is a _modulation_. Polarization *degree* and *angle* need instrument response and a background that is accurately characterized and subtracted. POLIX background can itself have variable two-fold modulation. The Crab POLIX L2 `WeightedRoll` product in this repo is the modulation curve --- the handbook says it still mixes source and background, so it is not a polarization measurement.
+
+== Units you will see in the files
+
+#table(
+  columns: 2,
+  table.header([*Word*], [*Meaning here*]),
+  [*keV*], [Photon energy. 1 keV $approx$ $2.4 times 10^17$ Hz.],
+  [*PHA*], [Pulse-height channel in the detector. Not energy until a response / calibration maps channel $arrow$ keV.],
+  [*Soft / hard*], [Roughly $lt.tilde 2$ keV vs $gt.tilde 2$--10 keV (usage varies). POLIX is hard X-ray polarimetry.],
+  [*Stokes Q, U*], [Cartesian packaging of linear polarization. Degree $sqrt(Q^2+U^2)\/I$, angle $1/2 "atan2"(U,Q)$.],
+  [*Modulation factor* $mu$], [Instrument: how strongly a 100% polarized beam would two-fold modulate.],
+  [*Crab*], [Bright, persistent pulsar + nebula. Classic X-ray calibrator. Polarized; still not a free pass to skip background.],
+)
+
+== Why background dominates some products
+
+X-ray detectors record events from source photons, cosmic X-ray background, particles, Earth albedo, and instrumental processes. For a bright point source the source can win. For faint AGN, or for a modulation measurement at the percent level, *source and background rates can be comparable*. Subtracting non-simultaneous "background" intervals is fragile if the particle environment changed. That is the limit documented in the Crab L2 quick-look.
+
+== Bridge to this workspace
+
+Inner disk / corona / jet $arrow$ X-ray spectrum (XSPECT) and X-ray polarization (POLIX) $arrow$ $Gamma$, Fe K$alpha$, reflection, and scatterer geometry.
 
 #pagebreak()
 
 = Glossary
 
-Short definitions for the black hole and quasar chapters.
+Short definitions for the black hole, quasar, and X-ray chapters.
 
 #table(
   columns: (auto, 1fr),
@@ -171,15 +246,23 @@ Short definitions for the black hole and quasar chapters.
   [*Accretion disk*], [Rotating gas that slowly spirals in and radiates.],
   [*BLR*], [Broad-line region --- fast clouds near the engine; Doppler-broadened lines.],
   [*Blazar*], [AGN with a jet pointed nearly at Earth.],
+  [*Compton hump*], [Broad reflection bump ~20--30 keV from Compton down-scattering in the disk.],
   [*Corona*], [Compact, hot plasma that Compton-upscatters disk photons into X-rays.],
+  [*Crab*], [Pulsar + nebula; standard bright X-ray calibrator. Polarized, but background still matters.],
   [*Eddington luminosity*], [Radiation-pressure limit: $L_"Edd" approx 1.3 times 10^38 (M \/ M_"☉") "erg" "s"^(-1)$. Quasars often run at a sizable fraction of this.],
   [*Event horizon*], [Surface of no return. Radius $R_"s" = 2 G M \/ c^2$ if the hole does not spin.],
   [*Gravitational radius*], [$r_"g" = G M \/ c^2 = R_"s" \/ 2$. Convenient inner-engine unit.],
+  [*Iron Kα*], [Fluorescence line near 6.4 keV (neutral Fe) from X-rays hitting the disk.],
   [*ISCO*], [Innermost stable circular orbit. $3 R_"s"$ if non-spinning; closer if spinning.],
   [*Jet*], [Collimated outflow along the spin axis, often relativistic.],
+  [*keV*], [Kilo-electronvolt. Unit of X-ray photon energy.],
   [*Kerr / Schwarzschild*], [Spinning / non-spinning vacuum black-hole solutions.],
+  [*Modulation (2φ)*], [Count-rate variation twice per instrument roll; used in scattering polarimetry.],
   [*NLR*], [Narrow-line region --- slower ionized gas farther out.],
+  [*PHA*], [Pulse-height analyzer channel. Detector bin; not keV until calibrated.],
   [*Photon sphere*], [Unstable light orbit at $1.5 R_"s"$ (non-spinning).],
+  [*POLIX*], [XPoSat scattering polarimeter, ~8--30 keV.],
+  [*Power law*], [Continuum $N(E) prop E^(-Gamma)$ from Comptonization in the corona.],
   [*Quasar*], [High-luminosity AGN; historically a star-like optical counterpart of a radio source.],
   [*Redshift* $z$], [Stretch of wavelength from cosmic expansion (plus, locally, Doppler/gravity). High $z$ = far / early universe.],
   [*Seyfert*], [Lower-luminosity AGN in a clearly visible nearby galaxy.],
@@ -187,6 +270,7 @@ Short definitions for the black hole and quasar chapters.
   [*Torus*], [Dusty, roughly toroidal structure that can obscure the BLR along equatorial sightlines.],
   [*Type 1 / Type 2*], [Broad lines visible / hidden. Often attributed to viewing angle.],
   [*Unification*], [The idea that several AGN classes are one engine seen from different directions.],
+  [*XSPECT*], [XPoSat soft X-ray spectrometer, ~0.8--15 keV.],
 )
 
 #pagebreak()
@@ -197,5 +281,7 @@ Short definitions for the black hole and quasar chapters.
 - NASA, #link("https://science.nasa.gov/mission/webb/science-overview/science-explainers/what-are-active-galactic-nuclei/")[What are active galactic nuclei?]
 - Narayan \& Quataert, _Nature_ *615*, 597 (2023) --- accretion and the inner engine
 - Tremaine, #link("https://www.ias.edu/ideas/2015/tremaine-quasars")[The Odd Couple: Quasars and Black Holes] (IAS)
+- NASA, #link("https://imagine.gsfc.nasa.gov/science/toolbox/xray_generation.html")[Introduction to the X-ray Universe]
+- ISSDC, POLIX User Handbook v1.0 (Oct 2025) --- modulation vs polarization in L2 products
 
 Illustrations: Grok Imagine (`figures/wiki/*.jpg`). Diagrams: SVG (`figures/wiki/*.svg`). Neither is telescope data.
