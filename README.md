@@ -39,6 +39,9 @@ A prebuilt copy is published automatically on every push to `main` that touches 
 
 Record obs-ids, processing versions, and archive URLs in `data/README.md` when data is added.
 
+The current Crab POLIX L2 quick-look is documented in
+[`notes/2026-09-13-crab-polix-l2-quicklook.md`](notes/2026-09-13-crab-polix-l2-quicklook.md).
+
 ## Getting started
 
 1. Read the wiki if the AGN picture is not yet solid: `docs/wiki/`.

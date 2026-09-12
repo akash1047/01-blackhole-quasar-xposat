@@ -3,6 +3,9 @@ data/**
 !data/README.md
 *.fits
 *.fits.gz
+*.zip
+*.tgz
+*.tar.gz
 *.evt
 *.pha
 *.rmf
