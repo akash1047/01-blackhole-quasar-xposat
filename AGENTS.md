@@ -12,11 +12,9 @@ This directory stores research files on **black holes**, **quasars**, and **XPoS
 
 ## Tech Stack
 
-No application stack yet. Typical tools for this domain (add here when locked in):
-
-- Python scientific stack (NumPy, Astropy, Matplotlib) if analysis is local
-- HEASoft / XSPEC / IXPE/XPoSat-specific reduction tools as needed
-- Jupyter or scripts under `analysis/`
+- **Python**: [uv](https://docs.astral.sh/uv/) project (`pyproject.toml`, name `xposat`). Bare init — add deps with `uv add`.
+- Analysis scripts under `analysis/` (NumPy, Astropy, Matplotlib when added)
+- HEASoft / XSPEC / POLIX L2 pipeline as needed
 
 ## Project Structure
 
@@ -27,11 +25,18 @@ Keep this tree in sync with the repo. **When you create, move, rename, or delete
 ├── AGENTS.md                 # project instructions (canonical)
 ├── CLAUDE.md                 # symlink → AGENTS.md
 ├── README.md                 # human overview; points at the wiki
+├── pyproject.toml            # uv project (astropy, matplotlib, numpy)
+├── uv.lock                   # uv lockfile
 ├── .gitignore                # FITS, .obsidian, and other local/large files
 ├── .github/
 │   └── workflows/
 │       └── release-pdf.yml   # builds docs/book/book.typ and publishes it as a rolling GitHub Release
-├── analysis/                 # scripts, notebooks, reduction pipelines
+├── analysis/
+│   ├── plot_polix_crab_l2.py # Crab POLIX L2 diagnostic plots and summary
+│   ├── results/
+│   │   └── crab-polix-l2-summary.csv # reproducible quick-look measurements
+│   └── tests/
+│       └── test_polix_crab_l2.py # two-fold modulation fit check
 ├── data/
 │   └── README.md             # how data was obtained, versions, citations
 ├── docs/
@@ -44,6 +49,8 @@ Keep this tree in sync with the repo. **When you create, move, rename, or delete
 │   └── book/
 │       └── book.typ          # Typst book build of the wiki; compiled PDF is gitignored
 ├── figures/
+│   ├── polix/
+│   │   └── crab-l2/          # Crab L2 rate, detector, PHA, and modulation diagnostics
 │   └── wiki/                 # teaching art + labeled SVG diagrams
 │       ├── black-hole-accretion.jpg
 │       ├── quasar-host-jets.jpg
@@ -51,8 +58,10 @@ Keep this tree in sync with the repo. **When you create, move, rename, or delete
 │       ├── schwarzschild-radii.svg
 │       ├── agn-anatomy.svg
 │       └── agn-unification.svg
-├── literature/               # papers, bib, reading notes
-└── notes/                    # dated working notes (YYYY-MM-DD-topic.md)
+├── literature/
+│   └── POLIX_User_Handbook.pdf  # ISSDC POLIX L2 user guide (v1.0, Oct 2025)
+└── notes/
+    └── 2026-09-13-crab-polix-l2-quicklook.md # methods, results, and limits
 ```
 
 ## Conventions
@@ -71,7 +80,11 @@ Keep this tree in sync with the repo. **When you create, move, rename, or delete
 
 ## Testing / Build
 
-None configured. If analysis code is added, put tests under `analysis/tests/` and document the run command here.
+Run the lightweight analysis check from the repository root:
+
+```sh
+uv run python -m unittest discover -s analysis/tests -v
+```
 
 ## Git
 
